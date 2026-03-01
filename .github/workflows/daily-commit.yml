@@ -3,7 +3,7 @@ on:
   schedule:
     # Runs at 12:30 UTC every day.
     # Avoids exactly 00:00 or top-of-the-hour which GitHub Actions may delay due to high load.
-    - cron: '30 12 * * *'
+    - cron: '38 20 * * *'
   # Allows you to run this workflow manually from the Actions tab for testing
   workflow_dispatch:
 
@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # required to push commits back to the repo
-      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
